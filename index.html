@@ -6,11 +6,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Welcome to the LogicBiotic Nexus, showcasing my projects, collaborations, and content related to biology and technology.">
-    <title>LogicBiotic Nexus</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>LogicBiotic Nexus - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="media/logicbiotic-logo.png" alt="LogicBiotic Nexus Logo" style="max-height:80px;">
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects/index.html">Projects</a></li>
+                <li><a href="collaborators/index.html">Collaborators</a></li>
+                <li><a href="gallery/index.html">Gallery</a></li>
+                <li><a href="downloads/index.html">Downloads</a></li>
+                <li><a href="contact/index.html">Contact</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://github.com/LogicBiotic" target="_blank"><img src="media/icons/github-logo.png"
+                        alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/herbert-f-mendoza/" target="_blank"><img
+                        src="media/icons/linkedin-logo.png" alt="LinkedIn"></a>
+                <a href="https://discord.gg/VCCKjUWQ9K" target="_blank"><img src="media/icons/discord-logo.png"
+                        alt="Discord"></a>
+                <a href="https://www.facebook.com/herbert.f.mendoza/" target="_blank"><img
+                        src="media/icons/facebook-logo.png" alt="Facebook"></a>
+                <a href="https://x.com/LogicBiotic" target="_blank"><img src="media/icons/x-logo.png"
+                        alt="Twitter (X)"></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="introduction">
+            <div class="introduction-text">
+                <h2><strong>Avid Biologist, </strong></h2>
+                <h2><strong>Emerging Developer,</strong></h2>
+                <h2><strong>& Problem Solver</strong></h2>
+                <p>Hey there, Adings! I'm Herbert F. Mendoza, also known as LogicBiotic.</p>
+                <p>Just as I study, celebrate, and enjoy life in nature, I also embrace its technological side. Follow
+                    me as I explore the intersection of biology and computer science.</p>
+                <p>Whether you're here to collaborate, chat, play games, learn more about my work, or even hire me, feel
+                    free to reach out. Click the button below to say hi!</p>
+                <button onclick="location.href='contact/index.html'">Let's connect</button>
+            </div>
+            <div class="introduction-image">
+                <img src="media/placeholder-image.png" alt="Placeholder Image" style="max-width:100%; height:auto;">
+            </div>
+        </section>
+        <div class="recent-work-header">
+            <h3>View my recent work</h3>
+        </div>
+        <section class="projects-carousel">
+            <div class="carousel-slide">
+                <div class="carousel-image">
+                    <img src="media/project1-image.jpg" alt="Project 1 Image">
+                </div>
+                <div class="carousel-details">
+                    <h4>Project 1</h4>
+                    <p>Description for Project 1.</p>
+                    <button onclick="location.href='projects/project1.html'">View Project</button>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="carousel-image">
+                    <img src="media/project2-image.jpg" alt="Project 2 Image">
+                </div>
+                <div class="carousel-details">
+                    <h4>Project 2</h4>
+                    <p>Description for Project 2.</p>
+                    <button onclick="location.href='projects/project2.html'">View Project</button>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="carousel-image">
+                    <img src="media/project3-image.jpg" alt="Project 3 Image">
+                </div>
+                <div class="carousel-details">
+                    <h4>Project 3</h4>
+                    <p>Description for Project 3.</p>
+                    <button onclick="location.href='projects/project3.html'">View Project</button>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="prev">Prev</button>
+                <button class="next">Next</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-socials">
+                <h3>Socials</h3>
+                <ul>
+                    <li><a href="https://github.com/LogicBiotic" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/herbert-f-mendoza/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://discord.gg/VCCKjUWQ9K" target="_blank">Discord</a></li>
+                    <li><a href="https://www.facebook.com/herbert.f.mendoza/" target="_blank">Facebook</a></li>
+                    <li><a href="https://x.com/LogicBiotic" target="_blank">Twitter (X)</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Hi Adings, thank you for visiting! Join my mailing list to get updates on my projects, stories, and
+                    progress.</p>
+                <form action="#" method="post" id="newsletter-form">
+                    <input type="email" name="email" id="newsletter-email" placeholder="E-Mail Address" required>
+                    <button type="submit">JOIN</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2024 LogicBiotic Nexus | Designed by LogicBiotic</p>
+        </div>
+    </footer>
 </body>
 
 </html>
