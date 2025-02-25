@@ -37,15 +37,14 @@ main {
 }
 
 .introduction-text {
-    margin-left: 250px;
-    margin-right: 250px;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 .introduction-image {
     margin-left: 150px;
     margin-right: 150px;
     border-radius: 15px;
-    filter: grayscale(100%);
     position: relative;
     overflow: hidden;
 }
@@ -107,7 +106,7 @@ main {
 header {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 30px;
     background-color: #f8f8f8;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -132,7 +131,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 50px;
     align-items: center;
     flex-wrap: nowrap;
 }
