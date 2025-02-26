@@ -1,45 +1,38 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const projectArrow = document.getElementById("projectsArrow");
-    const downloadArrow = document.getElementById("downloadsArrow");
+function showResumeAlert(event) {
+    event.preventDefault(); // Prevent the default link action
 
-    // Toggle dropdown visibility for Projects and Downloads dropdowns
-    projectArrow.addEventListener("click", function(event) {
-        event.stopPropagation();
-        const projectsDropdown = this.nextElementSibling;
-        projectsDropdown.classList.toggle("show");
+    // Check if an alert already exists, remove it first
+    let existingAlert = document.getElementById("resume-alert");
+    if (existingAlert) {
+        existingAlert.remove();
+    }
 
-        // Toggle arrow direction
-        this.textContent = this.textContent === '▲' ? '▼' : '▲';
+    // Create a floating alert div
+    let alertBox = document.createElement("div");
+    alertBox.id = "resume-alert";
+    alertBox.innerText = "If you wish to download my resume, please contact me via e-mail.";
+    alertBox.style.position = "fixed";
+    alertBox.style.top = "20px";
+    alertBox.style.left = "50%";
+    alertBox.style.transform = "translateX(-50%)";
+    alertBox.style.background = "#333";
+    alertBox.style.color = "#fff";
+    alertBox.style.padding = "15px 20px";
+    alertBox.style.borderRadius = "5px";
+    alertBox.style.boxShadow = "0px 4px 6px rgba(0, 0, 0, 0.1)";
+    alertBox.style.zIndex = "9999";
+    alertBox.style.opacity = "1";
+    alertBox.style.transition = "opacity 0.5s ease-in-out";
 
-        // Add or remove highlight class
-        this.classList.toggle("active");
-    });
+    // Append the alert box to the body
+    document.body.appendChild(alertBox);
 
-    downloadArrow.addEventListener("click", function(event) {
-        event.stopPropagation();
-        const downloadsDropdown = this.nextElementSibling;
-        downloadsDropdown.classList.toggle("show");
-
-        // Toggle arrow direction
-        this.textContent = this.textContent === '▲' ? '▼' : '▲';
-
-        // Add or remove highlight class
-        this.classList.toggle("active");
-    });
-
-    // Close dropdown if clicking outside
-    document.addEventListener("click", function() {
-        // Hide dropdown menus
-        document.querySelectorAll(".dropdown-menu").forEach(function(dropdown) {
-            dropdown.classList.remove("show");
-        });
-
-        // Reset arrows to ▼ when dropdowns are closed
-        projectArrow.textContent = '▼';
-        downloadArrow.textContent = '▼';
-
-        // Remove highlight class
-        projectArrow.classList.remove("active");
-        downloadArrow.classList.remove("active");
-    });
-});
+    // Remove the alert after 3 seconds and open the contact page in a new tab
+    setTimeout(() => {
+        alertBox.style.opacity = "0";
+        setTimeout(() => {
+            alertBox.remove();
+            window.open("contact/contact.html", "_blank"); // Opens in a new tab
+        }, 500);
+    }, 3000);
+}
